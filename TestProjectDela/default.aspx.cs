@@ -20,9 +20,8 @@ namespace TestProjectDela
             DateTime date2 = Calendar1.SelectedDate;
             int age = 0;
             age = DateTime.Now.AddYears(-date2.Year).Year;
-
-            Label1.Text = TextBox1.Text;
-            Label2.Text = age.ToString();
+            Label1.Visible = true;
+            Label1.Text = "Welkom " + TextBox1.Text + " je hebt nu een datum van " + age.ToString() + " jaar of langer geselecteerd";
          }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
