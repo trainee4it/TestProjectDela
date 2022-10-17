@@ -45,3 +45,11 @@ steps:
     buildType: 'current'
     downloadType: 'specific'
     downloadPath: '$(System.ArtifactsDirectory)'
+    
+- task: AzureRmWebAppDeployment@4
+  inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'testme'
+        appType: 'webApp'
+        WebAppName: 'davetestw1234'
+        packageForLinux: '$(System.ArtifactsDirectory)/drop/*.zip'
